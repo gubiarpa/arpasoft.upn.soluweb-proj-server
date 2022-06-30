@@ -1,8 +1,8 @@
 const { Router } = require('express');
-const { 
+const {
     aplicationGet,
     aplicationPost,
-} = require('../controllers')
+} = require('../controllers');
 
 const router = Router();
 

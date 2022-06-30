@@ -10,7 +10,8 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.pathList = {
-            pathAplication :   '/api/aplication',
+            pathAplication: '/api/aplication',
+            pathProduct: '/api/product',
         }
 
         this.connectDB();
@@ -29,12 +30,13 @@ class Server {
 
     routes() {
         this.app.use(this.pathList.pathAplication, require('../routes/aplication'));
+        this.app.use(this.pathList.pathProduct, require('../routes/product'));
     }
 
     listen() {
-      this.app.listen(this.port, () => {
-          console.log(`Server running on port ${ this.port }`);
-      });  
+        this.app.listen(this.port, () => {
+            console.log(`Server running on port ${this.port}`);
+        });
     }
 }
 
