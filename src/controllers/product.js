@@ -16,7 +16,7 @@ const productGet = async (req = request, res = response) => {
 
         res.json({
             totalRows,
-            aplications: products
+            products
         });
 
     } catch (error) {
