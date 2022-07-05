@@ -11,8 +11,10 @@ class Server {
         this.port = process.env.PORT;
         this.pathList = {
             pathAplication: '/api/aplication',
-            pathProduct: '/api/product',
+            pathShared: '/api/shared',
             pathInicio: '/api/inicio',
+            pathProduct: '/api/product',
+            pathContacto: '/api/contacto',
         }
 
         this.connectDB();
@@ -31,8 +33,10 @@ class Server {
 
     routes() {
         this.app.use(this.pathList.pathAplication, require('../routes/aplication'));
+        this.app.use(this.pathList.pathShared, require('../routes/shared'));
         this.app.use(this.pathList.pathProduct, require('../routes/product'));
         this.app.use(this.pathList.pathInicio, require('../routes/inicio'));
+        this.app.use(this.pathList.pathContacto, require('../routes/contacto'));
     }
 
     listen() {
