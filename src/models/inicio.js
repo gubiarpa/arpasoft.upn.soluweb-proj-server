@@ -13,6 +13,12 @@ const InicioSchema = Schema({
     testimony1: {
         type: String,
     },
+    customer2: {
+        type: String,
+    },
+    testimony2: {
+        type: String,
+    },
 });
 
 InicioSchema.methods.toJSON = function () {
