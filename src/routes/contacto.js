@@ -5,6 +5,6 @@ const {
 
 const router = Router();
 
-router.get('/', contactoPost);
+router.post('/', contactoPost);
 
 module.exports = router;

@@ -4,7 +4,7 @@ const ContactoSchema = Schema({
     name: {
         type: String,
     },
-    email: {
+    telephone: {
         type: String,
     },
     message: {
