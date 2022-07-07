@@ -14,6 +14,7 @@ class Server {
             pathInicio: '/api/inicio',
             pathProduct: '/api/product',
             pathContacto: '/api/contacto',
+            pathPrice: '/api/price',
         }
 
         this.connectDB();
@@ -35,6 +36,7 @@ class Server {
         this.app.use(this.pathList.pathProduct, require('../routes/product'));
         this.app.use(this.pathList.pathInicio, require('../routes/inicio'));
         this.app.use(this.pathList.pathContacto, require('../routes/contacto'));
+        this.app.use(this.pathList.pathPrice, require('../routes/price'));
     }
 
     listen() {
