@@ -3,6 +3,7 @@ const Inicio = require('./inicio');
 const Contacto = require('./contacto');
 const Shared = require('./shared');
 const Price = require('./price');
+const Servicio = require('./servicio');
 
 module.exports = {
     Shared,
@@ -10,4 +11,5 @@ module.exports = {
     Inicio,
     Contacto,
     Price,
+    Servicio,
 }
